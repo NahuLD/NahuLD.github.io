@@ -1,89 +1,86 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Nahu's Lounge</title>
-
-        <meta charset="utf-8"/>
-        <link rel="icon" type="image/png" href="assets/img/favicon.ico"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
-
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>
+            Nahu's Lounge
+        </title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
         <!--     Fonts and icons     -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
-
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/88c39f308c.js" crossorigin="anonymous"></script>
         <!-- CSS Files -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="assets/css/material-kit.css" rel="stylesheet"/>
-        <link href="assets/sass/index.min.css" rel="stylesheet"/>
+        <link href="./assets/css/material-kit.css?v=2.0.6" rel="stylesheet" />
+
+        <link href="assets/css/index.css" rel="stylesheet"/>
     </head>
 
     <body class="index-page">
         <!--   Core JS Files   -->
-        <script src="assets/js/jquery.min.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="assets/js/material.min.js"></script>
-
+        <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+        <script src="assets/js/plugins/moment.min.js"></script>
+        <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+        <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
         <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-        <script src="assets/js/nouislider.min.js" type="text/javascript"></script>
+        <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+        <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+        <script src="assets/js/material-kit.js?v=2.0.6" type="text/javascript"></script>
+        <script>
+            $(document).ready(function() {
+                //init DateTimePickers
+                materialKit.initFormExtendedDatetimepickers();
 
-        <!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
-        <script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
-
-        <!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
-        <script src="assets/js/material-kit.js" type="text/javascript"></script>
-
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-        <script type="text/javascript">
-            $().ready(function(){
-                // the body of this function is in assets/material-kit.js
+                // Sliders Init
                 materialKit.initSliders();
-                window_width = $(window).width();
-                if (window_width >= 992){
-                    big_image = $('.wrapper > .header');
-                    $(window).on('scroll', materialKitDemo.checkScrollForParallax);
-                }
             });
         </script>
+        <!-- Index JS -->
+        <script src="assets/js/index.js" type="text/javascript"></script>
 
-         <div class="page-background"></div>
+        <div class="page-background"></div>
 
-        <div id="header">
-            <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="brand">
-                                <h1>Nahu</h1>
-                                <h5><i>Developer, engineering student.</i></h5>
-                            </div>
-                        </div>
+        <div class="page-header">
+            <div class="container">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="brand">
+                        <h1>Nahu</h1>
+                        <h5><i>Developer, engineering student.</i></h5>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <footer class="footer">
             <div class="container">
                 <nav class="pull-left">
                     <ul>
                         <li>
-                            <a rel="tooltip" title="Nahu#1307" data-placement="top" href="https://goo.gl/Hg8xW9" target="_blank" class="btn btn-simple btn-just-icon">
-                                <img src="assets/img/discord-logo_30x30.png">
+                            <a rel="tooltip" title="Contact" data-placement="top" href="mailto:contact@nahu.me" target="_blank" class="btn btn-info">
+                                <i class="material-icons">email</i> Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="copyToClipboard('Nahu#1307')" rel="tooltip" title="Discord" data-container="body" data-toggle="popover" data-placement="top" data-content="Copied to clipboard!" class="btn btn-simple btn-just-icon">
+                                <i class="fab fa-discord"></i>
                             </a>
                         </li>
                         <li>
                             <a rel="tooltip" title="GitHub" data-placement="top" href="https://github.com/NahuLD/" target="_blank" class="btn btn-simple btn-just-icon">
-                                <img src="assets/img/github-logo_27x27.png">
+                                <i class="fab fa-github-alt"></i>
                             </a>
                         </li>
                     </ul>
                 </nav>
                 <div class="copyright pull-right">
-                    <p>&copy; 2019, made with <i class="material-icons">favorite</i> by Nahu</p>
+                    <p>&copy; <script>
+                        document.write(new Date().getFullYear())
+                    </script>, made with <i class="material-icons">favorite</i> by Nahu</p>
                     <p>Icon made by <b>Freepik</b> from <a href="https://flaticon.com/">FlatIcon</a></p>
                 </div>
             </div>
