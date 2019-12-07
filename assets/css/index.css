@@ -8,10 +8,10 @@ body{
 .page-background{
     height: 100%;
     width: 100%;
-    position: relative;
+    position: fixed;
     overflow: hidden;
     background-image: linear-gradient(hsla(30,50%,80%,.5), hsla(30,50%,80%,0));
-    animation: bg-move 3s infinite;
+    animation: bg-move 7s infinite;
     will-change: background-color;
 }
 
@@ -52,10 +52,10 @@ body{
 
 @keyframes bg-move {
     0%, 100% {
-        background-color: hsl(240,60%,80%);
+        background-color: #FB8C00;
     }
     50% {
-        background-color: hsl(330,60%,80%);
+        background-color: #4FC3F7;
     }
 }
 
